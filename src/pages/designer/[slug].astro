@@ -1,15 +1,20 @@
 ---
-export const prerender = true;
-
 export async function getStaticPaths() {
   return [
-    { params: { slug: 'vipul-talari' } },
-    { params: { slug: 'test-designer' } },
+    { params: { slug: 'vipul-talari' } }
   ];
 }
 
 const { slug } = Astro.params;
 ---
 
-<h1>Designer page</h1>
-<p>Slug: {slug}</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Designer {slug}</title>
+  </head>
+  <body>
+    <h1>Designer Page</h1>
+    <p>Slug: {slug}</p>
+  </body>
+</html>
