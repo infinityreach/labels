@@ -1,8 +1,10 @@
 ---
+export const prerender = true;
+
 export async function getStaticPaths() {
   return [
     { params: { slug: 'vipul-talari' } },
-    { params: { slug: 'test-designer' } }
+    { params: { slug: 'test-designer' } },
   ];
 }
 
