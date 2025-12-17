@@ -1,0 +1,14 @@
+---
+const { slug } = Astro.params;
+
+// slug can be string or array
+const path = Array.isArray(slug) ? slug.join('/') : slug;
+
+// TEMP DEBUG
+if (path.startsWith('designer/')) {
+  const designerSlug = path.replace('designer/', '');
+  return (
+    <h1>Designer page works: {designerSlug}</h1>
+  );
+}
+---
