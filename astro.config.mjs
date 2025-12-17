@@ -9,7 +9,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://bestmeditationapps.com",
+  output: 'static',
+  site: "https://hyderabadlabels.com",
   integrations: [
     vue(),
     mdx(),
