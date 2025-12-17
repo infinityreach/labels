@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const designers = await getCollection("designer");
+
+  return designers.map(d => ({
+    params: { slug: ["designer", d.slug] },
+    props: { designer: d }
+  }));
+}
+
+const { designer } = Astro.props;
+---
+
+<h1>{designer.name}</h1>
+<p>Slug: {designer.slug}</p>
